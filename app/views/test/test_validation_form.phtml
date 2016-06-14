@@ -1,0 +1,72 @@
+
+<?php 
+$arrayName = array('item1','item2','item3');
+print(end($arrayName));
+ ?>
+<form class="cmxform" id="commentForm" method="get" action="">
+<fieldset>
+<legend>Please provide your name, email address (won't be published) and a comment</legend>
+<p>
+<label for="cname">Name (required, at least 2 characters)</label>
+<input id="input-cname" name="name" minlength="2" type="text" >
+<label id="alert-cname" style="color:red; display: none;" >Campo requerido</label>
+</p>
+<p>
+<label for="cemail">E-Mail (required)</label>
+<input id="input-email" type="email" name="email" >
+<label id="alert-email" style="color:red; display: none;" >Campo requerido</label>
+</p>
+<p>
+<label for="curl">URL (optional)</label>
+<input id="input-curl" type="url" name="url">
+<label id="alert-curl" style="color:red; display: none;" >Campo requerido</label>
+</p>
+<p>
+<label for="ccomment">Your comment (required)</label>
+<textarea id="input-ccomment" name="comment" ></textarea>
+<label id="alert-ccomment" style="color:red; display: none;" >Campo requerido</label>
+</p>
+<fieldset>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="scsl_cdg"><i class="fa fa-calendar">&nbsp;&nbsp;</i> <strong style="color:red;">*</strong> Hasta:</label>
+				<div class="col-md-8" data-toggle="popoverhover" data-placement="top" title="Hasta" data-content="Blah Blah Blah ..">
+					<input id="input-desde" type="text" class="form-control input-datepicker" name="input-desde" data-date-format="dd/mm/yyyy" readonly="readonly" style="background-color: white;">
+                <label id="alert-hasta" style="color:red; display: none;" >Campo requerido</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</fieldset>
+<fieldset>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="scsl_cdg"><i class="fa fa-calendar">&nbsp;&nbsp;</i> <strong style="color:red;">*</strong> Desde:</label>
+				<div class="col-md-8" data-toggle="popoverhover" data-placement="top" title="Desde" data-content="Blah Blah Blah ..">
+					<input id="input-hasta" type="text" class="form-control input-datepicker" name="input-hasta" data-date-format="dd/mm/yyyy" readonly="readonly" style="background-color: white;">
+                <label id="alert-desde" style="color:red; display: none;" >Campo requerido</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</fieldset>
+<p>
+<label for="ccomment">Your comment (required)</label>
+<select  data-placeholder="Selecciona un Opción"  id="input-select" name="select_dest" class="select-chosen">
+			<option value=""></option>				
+			<option value="1">1</option>				
+</select>
+<label id="alert-select" style="color:red; display: none;" >Campo requerido</label>
+
+<div>
+<label for="ccomment">Your comment (required)</label>
+<input type="file" id="input-file" name="example-file-multiple-input" multiple="">
+<label id="alert-file" style="color:red; display: none;" >Campo requerido</label>
+</div>
+<div>
+<a class="btn btn-success" id="btn">enviar</a>
+</div>
+</fieldset>
+</form>
